@@ -1,0 +1,68 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "aprobaciones",
+        "description": "",
+        "version": "0.0.1"
+    },
+    "servers": [
+        {
+            "url": "https://xoas-qetn-dh88.n7c.xano.io/api:xiRf2PrY"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        },
+        "schemas": {}
+    },
+    "paths": {
+        "/report/schema": {
+            "get": {
+                "operationId": "aprobaciones/report/schema|GET",
+                "summary": "",
+                "description": "\u003Cbr /\u003E\u003Cbr /\u003E\n\u003Cb\u003EAuthentication:\u003C/b\u003E not required",
+                "tags": [
+                    "report"
+                ],
+                "security": [],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "description": ""
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Input Error. Check the request payload for issues."
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Access denied. Additional privileges are needed access the requested resource."
+                    },
+                    "404": {
+                        "description": "Not Found. The requested resource does not exist."
+                    },
+                    "429": {
+                        "description": "Rate Limited. Too many requests."
+                    },
+                    "500": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        }
+    }
+}
